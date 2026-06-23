@@ -208,9 +208,13 @@ h3 {
 
 .summary-block p {
   max-width: 780px;
-  margin-bottom: 0;
+  margin-bottom: 14px;
   color: #334249;
   font-size: 1.02rem;
+}
+
+.summary-block p:last-child {
+  margin-bottom: 0;
 }
 
 .quick-facts {
