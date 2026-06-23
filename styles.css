@@ -60,6 +60,7 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: clamp(14px, 3vw, 26px);
   color: var(--muted);
   font-size: 0.95rem;
@@ -261,17 +262,20 @@ h3 {
   font-size: 1.45rem;
 }
 
-.research-list {
+.research-list,
+.link-list {
   display: grid;
   gap: 14px;
 }
 
-.research-list article {
+.research-list article,
+.link-list a {
   padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
 }
 
-.research-list article:last-child {
+.research-list article:last-child,
+.link-list a:last-child {
   padding-bottom: 0;
   border-bottom: 0;
 }
@@ -280,6 +284,24 @@ h3 {
 .timeline-item p {
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.link-list a {
+  display: grid;
+  gap: 2px;
+}
+
+.link-list span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.link-list strong {
+  color: var(--teal-dark);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
 }
 
 .timeline {
@@ -363,7 +385,7 @@ h3 {
 
   .site-nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 10px;
     font-size: 0.9rem;
   }
